@@ -40,6 +40,8 @@ with st.echo(code_location='below'):
         x=alt.X(value, aggregate='count', type='quantitative', stack="normalize"),
         y=alt.Y(type, type='nominal'),
         color=value
+    ).properties(
+    width=600
     )
             st.altair_chart(fign)
 
@@ -47,7 +49,7 @@ with st.echo(code_location='below'):
     monthseries=pd.Series(months_list)
     monthslist2=["2019-01", "2019-02", "2019-03", "2019-04", "2019-05", "2019-06", "2019-07", "2019-08", "2019-09", "2019-10", "2019-11", "2019-12", "2020-01", "2020-02", "2020-03", "2020-04", "2020-05", "2020-06", "2020-07", "2020-08", "2020-09", "2020-10", "2020-11", "2020-12", "2021-01", "2021-02", "2021-03", "2021-04", "2021-05", "2021-06", "2021-07", "2021-08", "2021-09", "2021-10", "2021-11", "2021-12", "2022-01", ]
 
-    st.write(f"## Now, let's move on to power capacity of India. Here we'll start with the question - what sources of energy India uses and how their total amount and their share changed over the last three years?")
+    st.write(f"## Now, let's move on to power capacity of India. Here we'll start with the question - what sources of energy does India use and how has their total amount and their share changed over the last three years?")
 
     df2=pd.read_csv("https://raw.githubusercontent.com/temporarywarlord/streamlit-hw/master/All%20India%20Installed%20Capacity.csv")
 
@@ -81,7 +83,7 @@ with st.echo(code_location='below'):
 
     st.altair_chart(points + lines) ###END FROM https://altair-viz.github.io/gallery/multiline_highlight.html
 
-    st.write("So we've looked into its main sources of energy - but what specific kinds of renewable energy India has?")
+    st.write("So we've looked into its main sources of energy - but what specific kinds of renewable energy does India have?")
 
     df1=pd.read_csv("https://raw.githubusercontent.com/temporarywarlord/streamlit-hw/master/All%20India%20Installed%20Capacity(RES).csv")
 
