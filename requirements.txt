@@ -1,2 +1,4 @@
-seaborn
+plotly
 altair
+bokeh == 2.4.1
+numpy
